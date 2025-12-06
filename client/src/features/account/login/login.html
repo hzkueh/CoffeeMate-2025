@@ -1,0 +1,18 @@
+<div class="card bg-amber-700 w-1/2 mx-auto flex flex-col p-6 rounded-lg shadow">
+    <div class="card-title justify-center text-3xl text-white">Sign Up</div>
+    <div class="card-body w-full">
+        <form #loginForm="ngForm" class="flex flex-col gap-4 w-full " (ngSubmit)="login()">
+            <input type="text" class="input w-full bg-white text-base-100 placeholder-gray-500 shadow-2xl" name="email" 
+                [(ngModel)]="creds.email" placeholder="Email">
+            
+           <input type="text" class="input w-full bg-white text-base-100 placeholder-gray-500 shadow-2xl" name="password" 
+                [(ngModel)]="creds.password" placeholder="Password">
+
+            <div class="flex items-center justify-end gap-3">
+                <button type="button" (click)="cancel()" class="border-2 border-amber-500 text-white px-8 py-4 rounded-lg font-semibold hover:border-amber-800 transition">Cancel</button>
+                <button class="bg-amber-800 text-white px-8 py-4 rounded-md font-semibold hover:bg-amber-900 transition transform hover:scale-105 shadow-lg" 
+                    type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input, signal } from '@angular/core';
+import { Account } from '../../types/account';
+
 
 @Component({
   selector: 'app-nav',
